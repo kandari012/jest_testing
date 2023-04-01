@@ -11,3 +11,36 @@ describe("number operations", () => {
     expect(a + b).not.toBe(3);
   });
 });
+
+describe("testing other variable methods", () => {
+  test("testing that variable is undefined", () => {
+    let a = undefined;
+    expect(a).not.toBeDefined();
+    expect(a).toBeUndefined();
+    expect(a).not.toBeNull();
+    expect(a).toBeFalsy();
+    expect(a).not.toBeTruthy();
+  });
+
+  test("number compare", () => {
+    let a = 2;
+    let b = 3;
+    expect(a + b).toBeGreaterThan(2);
+    expect(a + b).toBeLessThanOrEqual(8);
+  });
+});
+
+describe("string testing", () => {
+  test("contains", () => {
+    let a = "chistophar";
+    expect(a).toMatch(/stop/i);
+  });
+});
+
+describe("array testing", () => {
+  test("includes", () => {
+    let a = ["milk", "power"];
+    expect(a).toContain("milk");
+    expect(a).not.toContain("AZ");
+  });
+});
